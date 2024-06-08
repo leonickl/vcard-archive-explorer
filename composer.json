@@ -1,0 +1,19 @@
+{
+    "name": "leo/people",
+    "type": "project",
+    "require": {
+        "illuminate/support": "^11.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "JeroenDesloovere\\VCard\\": "parser/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Leo Nickl",
+            "email": "leo@leonickl.de"
+        }
+    ]
+}
