@@ -1,3 +1,5 @@
+# Vcard Archive Explorer
+
 This project reads all vcard contacts in a folder and displays them within a list.
 Can be used to view deleted contacts that are still available in a backup archive.
 All the vcard files should be within the folder ./storage/vcards.
