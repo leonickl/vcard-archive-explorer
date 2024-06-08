@@ -1,5 +1,5 @@
 {
-    "name": "leo/people",
+    "name": "gehmasse/vcard-archive-explorer",
     "type": "project",
     "require": {
         "illuminate/support": "^11.10"

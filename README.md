@@ -9,5 +9,6 @@ As a parser I use JeroenDesloovere\VCard, but I have customised the VCardParser:
 because the original one uses DateTime, which cannot recognise all birthday types. I am using my own Date class now.
 
 Get started:
+- Install PHP 8.3
 - Install dependencies via `composer install`.
 - Run `php people` to show a list of all contacts that displays name, phone numbers, mail addresses and birthdays.

@@ -6,18 +6,13 @@ use Illuminate\Support\Collection;
 
 class Files
 {
-    public const STORAGE = __DIR__ . '/../storage';
-    public const VCARDS = self::STORAGE . '/vcards';
+    public const string STORAGE = __DIR__ . '/../storage';
+    public const string VCARDS = self::STORAGE . '/vcards';
 
-    private function list(string $dir) : Collection
+    public function people(): Collection
     {
-        return collect(scandir($dir))
-            ->filter(fn(string $file) => !str_starts_with($file, '.') && str_ends_with($file, '.vcf'));
-    }
-
-    public function people() : Collection
-    {
-        return $this->list(self::VCARDS)
+        return collect(scandir(self::VCARDS))
+            ->filter(fn(string $file) => !str_starts_with($file, '.') && str_ends_with($file, '.vcf'))
             ->map(File::make(...))
             ->flatMap(fn(File $file) => $file->people());
     }

@@ -1,15 +1,5 @@
 <?php
-// Include a vCard parsing library, for example, 'Skeema/vcard' via Composer
+
 require 'vendor/autoload.php';
 
-use App\Files;
-use App\Person;
-
-(new Files)->people()
-    ->sortByDesc(fn(Person $p) => $p->fullName())
-    ->unique(fn(Person $p) => $p->fullName())
-    ->reverse()
-    ->each(function(Person $p) {
-        echo $p->info() . PHP_EOL;
-    });
-
+echo App\App::run();
