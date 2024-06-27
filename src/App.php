@@ -10,7 +10,8 @@ class App
             ->sortByDesc(fn(Person $p) => $p->fullName())
             ->unique(fn(Person $p) => $p->fullName())
             ->reverse()
-            ->map(fn(Person $p) => $p->info())
+            ->values()
+            ->map(fn(Person $p, int $i) => $i . ': ' . $p->info())
             ->join(PHP_EOL);
     }
 }
