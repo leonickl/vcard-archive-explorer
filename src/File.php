@@ -19,7 +19,7 @@ readonly class File
 
     private function path(): string
     {
-        return Files::VCARDS . '/' . $this->file;
+        return Files::directory() . '/' . $this->file;
     }
 
     public function people(): array
